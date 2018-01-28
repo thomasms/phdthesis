@@ -1,0 +1,94 @@
+
+\documentclass[a4paper,11pt,default,numbered,print,index]{Classes/PhDThesisPSnPDF}
+
+% Preamble: Contains packages and user-defined commands and settings
+\input{Preamble/preamble}
+
+% ************************ Thesis Information & Meta-data **********************
+%% The title of the thesis
+\title{Neutral Particle Detection Methods Using Noble Gases in LAGUNA-LBNO and MODES-SNM}
+\renewcommand{\submissiontext}{Thesis submitted in accordance with the requirements of \\
+the University of Liverpool for the degree of Doctor in Philosophy}
+
+%% The full name of the author
+\author{Thomas Michael Stainer}
+
+\dept{Oliver Lodge Laboratory,}
+\university{University of Liverpool}
+%\crest{\includegraphics[width=0.30\textwidth]{ThesisFigs/UniCrestNew.png}}
+
+%% Full title of the Degree 
+\degree{Doctor of Philosophy}
+
+%% Submission date
+\degreedate{July 2015} 
+
+%% Meta information
+\subject{LaTeX} \keywords{{LaTeX} {PhD Thesis} {Physics} {University of
+Liverpool}} 
+
+\ifdefineAbstract
+ \includeonly{Abstract/abstract} 
+\else
+\fi
+
+\begin{document}
+
+\frontmatter
+
+\begin{titlepage}
+	\maketitle
+\end{titlepage}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+%\include{Dedication/dedication}
+\include{Abstract/abstract}
+\include{Acknowledgement/acknowledgement}
+\include{Declaration/declaration}
+\include{Glossary/glossary}
+
+\pagenumbering{roman}
+
+\tableofcontents
+
+%\listoffigures
+%\listoftables 
+
+\printnomencl
+
+\mainmatter
+\pagenumbering{arabic}
+\include{Introduction/introduction} 
+\include{Chapter1/chapter1}
+\include{Chapter2/chapter2}
+\include{Chapter3/chapter3}
+\include{Chapter4/chapter4}
+\include{Chapter5/chapter5}
+\include{Chapter6/chapter6}
+\include{Chapter7/chapter7}
+\include{Chapter8/chapter8}
+
+%Conclusion
+\include{Chapter9/chapter9}
+
+\backmatter 
+
+\begin{spacing}{0.9}
+
+%\bibliographystyle{authordate1}
+%\bibliographystyle{unsrt}
+\bibliographystyle{ieeetr}
+\renewcommand{\bibname}{References} % changes default name Bibliography to References
+\bibliography{References/references} % References file
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\end{spacing}
+
+% *************************************** Index ********************************
+\printthesisindex % If index is present
+
+\printthesisindex
+
+\end{document}
