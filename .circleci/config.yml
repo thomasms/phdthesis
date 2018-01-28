@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: bareit/pdflatex
+    steps:
+      - checkout
+      - run:
+          name: Start
+          command: echo Compiling thesis.
+      - run:
+          name: PdfLatex
+          command: pdflatex thesis_main.tex
