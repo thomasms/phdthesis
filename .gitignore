@@ -6,7 +6,6 @@
 *.bbl
 *.out
 *.synctex.gz
-*.pdf
 *.nlo
 *.idx
 *.fls
@@ -15,3 +14,5 @@
 *.fdb_latexmk
 
 *.texshop
+
+thesis_main.pdf
