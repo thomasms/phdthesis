@@ -9,17 +9,5 @@ jobs:
           name: Start
           command: echo Compiling thesis.
       - run:
-          name: PdfLatex
-          command: pdflatex thesis_main.tex
-      - run:
-          name: PdfLatex again
-          command: pdflatex thesis_main.tex
-      - run:
-          name: Bibtex
-          command: bibtex thesis_main.aux
-      - run:
-          name: PdfLatex last time
-          command: pdflatex thesis_main.tex
-      - run:
-          name: change name
-          command: mv thesis_main.pdf thomasstainerthesis2015.pdf
+          name: Build
+          command: bash build.sh

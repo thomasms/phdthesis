@@ -3,8 +3,4 @@ before_install:
   - sudo apt-get install -y texlive texlive-latex-recommended  texlive-latex-extra
 
 script:
-  - pdflatex thesis_main.tex
-  - pdflatex thesis_main.tex
-  - bibtex thesis_main.aux
-  - pdflatex thesis_main.tex
-  - mv thesis_main.pdf thomasstainerthesis2015.pdf
+  - bash build.sh 
